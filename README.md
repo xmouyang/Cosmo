@@ -13,21 +13,21 @@ The program has been tested in the following environment:
 
 # Cosmo Overview
 <p align="center" >
-	<img src="https://github.com/xmouyang/ClusterFL/blob/main/figures/ClusterFL-system-overview.png" width="500">
+	<img src="https://github.com/xmouyang/Cosmo/blob/main/materials/Overview.png" width="500">
 </p>
 
 * Cosmo on the cloud: 
-	* do local training with the collabrative learning variables;
-	* communicate with the server.
+	* contrastive fusion learning for capturing consistent information from unlabeled multimodal data;
+	* evaluate data quality for each modality according to unlabeled multimodal data.
 * Cosmo on edge: 
-	* recieve model weights from the clients;
-	* learn the relationship of clients;
-	* update the collabrative learning variables and send them to each client.
+	* initialize the feature encoders and the fusion weights of data quality learned on the cloud; 
+	* iterative fusion learning for combining complementary information from limited labeled multimodal data.
+
 
 
 # Project Strcuture
 ```
-|-- client                    // code in client side
+|-- cosmo                    // code in client side
     |-- client_cfmtl.py/	// main file of client 
     |-- communication.py/	// set up communication with server
     |-- data_pre.py/		// prepare for the FL data
@@ -40,7 +40,7 @@ The program has been tested in the following environment:
 
 |-- README.md
 
-|-- pictures               // figures used this README.md
+|-- materials               // figures and materials used this README.md
 ```
 <br>
 
