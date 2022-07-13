@@ -13,7 +13,7 @@ The program has been tested in the following environment:
 
 # Cosmo Overview
 <p align="center" >
-	<img src="https://github.com/xmouyang/Cosmo/blob/main/materials/Overview.png" width="500">
+	<img src="https://github.com/xmouyang/Cosmo/blob/main/materials/Overview.png" width="700">
 </p>
 
 * Cosmo on the cloud: 
