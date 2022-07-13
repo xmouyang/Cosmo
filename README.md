@@ -3,13 +3,12 @@ This is a repo for MobiCom 2022 paper: " <a href="https://dl.acm.org/doi/10.1145
 
 # Requirements
 The program has been tested in the following environment: 
-* Ubuntu 18.04
-* Python 3.6.8
-* Tensorflow 2.4.0
-* sklearn 0.23.1
-* opencv-python 4.2.0
-* Keras-python 2.3.1
-* numpy 1.19.5
+* Python 3.9.7
+* Pytorch 1.8.1
+* torchvision 0.9.1
+* sklearn 0.24.2
+* opencv-python 4.5.5
+* numpy 1.20.3
 <br>
 
 # ClusterFL Overview
@@ -17,10 +16,10 @@ The program has been tested in the following environment:
 	<img src="https://github.com/xmouyang/ClusterFL/blob/main/figures/ClusterFL-system-overview.png" width="500">
 </p>
 
-* ClusterFL on client: 
+* Cosmo on the cloud: 
 	* do local training with the collabrative learning variables;
 	* communicate with the server.
-* ClusterFL on server: 
+* Cosmo on edge: 
 	* recieve model weights from the clients;
 	* learn the relationship of clients;
 	* update the collabrative learning variables and send them to each client.
