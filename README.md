@@ -1,4 +1,4 @@
-# Cosmo
+# Cosmo: Contrastive Fusion Learning with Small Data
 This is a repo for MobiCom 2022 paper: " <a href="https://dl.acm.org/doi/10.1145/3458864.3467681"> Cosmo: Contrastive Fusion Learning with Small Data for Multimodal Human Activity Recognition </a>".
 
 # Requirements
@@ -11,7 +11,7 @@ The program has been tested in the following environment:
 * numpy 1.20.3
 <br>
 
-# ClusterFL Overview
+# Cosmo Overview
 <p align="center" >
 	<img src="https://github.com/xmouyang/ClusterFL/blob/main/figures/ClusterFL-system-overview.png" width="500">
 </p>
