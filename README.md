@@ -27,16 +27,34 @@ The program has been tested in the following environment:
 
 # Project Strcuture
 ```
-|-- cosmo                    // code in client side
-    |-- client_cfmtl.py/	// main file of client 
-    |-- communication.py/	// set up communication with server
-    |-- data_pre.py/		// prepare for the FL data
-    |-- model_alex_full.py/ 	// model on client 
-    |-- desk_run_test.sh/	// run client 
+|--sample-code-UTD // sample code of each approach on the UTD dataset
 
-|-- server/    // code in server side
-    |-- server_cfmtl.py/        // main file of client
-    |-- server_model_alex_full.py/ // model on server 
+	|-- Cosmo                    // codes of our approach Cosmo
+	    |-- main_con.py/	// main file of contrastive fusion learning on cloud 
+	    |-- main_linear_iterative.py/	// main file of supervised learning on edge (and load feature encoders) 
+	    |-- data_pre.py/		// prepare for the multimodal training and testing data
+	    |-- cosmo_design.py/ 	// fusion-based feature augmentation and contrastive fusion loss
+	    |-- cosmo_model_guide.py/	// models of unimodal feature encoders and the quality-quided attention based classifier
+	    |-- util.py/	// utility functions
+
+	|-- CMC                    // codes of the baseline Contrastive Multi-view Learning (CMC)
+	    |-- main_con.py/	// main file of contrastive multi-view learning
+	    |-- main_linear_iterative.py/	// main file of supervised learning (and load feature encoders) 
+	    |-- data_pre.py/		// prepare for the multimodal training and testing data
+	    |-- cosmo_design.py/ 	//  feature augmentation and contrastive loss
+	    |-- cosmo_model_guide.py/	// models of unimodal feature encoders and the attention based classifier
+	    |-- util.py/	// utility functions
+
+	|-- supervised-baselines                    // codes of the supervised learning baselines
+	    |-- attnsense_main_ce.py/	// main file of AttnSense
+	    |-- attnsense_model.py/	// models of AttnSense
+	    |-- deepsense_main_ce.py/	// main file of DeepSense
+	    |-- deepsense_model.py/	// models of DeepSense
+	    |-- single_main_ce.py/	// main file of single modal learning
+	    |-- single_model.py/	// models of single modal learning (IMU and skeleton)
+	    |-- data_pre.py/		// prepare for the multimodal and singlemodal training and testing data
+	    |-- util.py/	// utility functions
+|--UTD-data 	// splited data for the UTD dataset
 
 |-- README.md
 
@@ -45,31 +63,37 @@ The program has been tested in the following environment:
 <br>
 
 # Quick Start
-* Download the `dataset` folders (collected by ourself) from [FL-Datasets-for-HAR](https://github.com/xmouyang/FL-Datasets-for-HAR) to your client machine.
-* Chooose one dataset from the above four datasets and change the "read-path" in 'data_pre.py' to the path on your client machine.
-* Change the 'server_x_test.txt' and 'server_y_test.txt' according to your chosen dataset, default as the one for "imu_data_7".
-* Change the "server_addr" and "server_port" in 'client_cfmtl.py' as your true server address. 
-* Run the following code on the client machine
+* Download the `sample-code-UTD` folder and `UTD-data` folder to your machine, then put `UTD-data` into the folder `sample-code-UTD`.
+* Run the following code for our approach Cosmo
     ```bash
-    cd client
-    ./desk_run_test.sh
+    cd ./sample-code-UTD/Cosmo/
+    python3 main_con.py --batch_size 32 --label_rate 5 --learning_rate 0.01
+    python3 main_linear_iterative.py --batch_size 16 --label_rate 5 --learning_rate 0.001 --guide_flag 1 --method iterative
     ```
-* Run the following code on the server machine
+* Run the following code for the baseline Contrastive Multi-view Learning (CMC)
     ```bash
-    cd server
-    python3 server_cfmtl.py
+    cd ./sample-code-UTD/CMC/
+    python3 main_con.py --batch_size 32 --label_rate 5 --learning_rate 0.01
+    python3 main_linear.py --batch_size 16 --label_rate 5 --learning_rate 0.001
+    ```
+* Run the following code for the supervised learning baselines
+    ```bash
+    cd ./sample-code-UTD/supervised-baselines/
+    python3 attnsense_main_ce.py --batch_size 16 --label_rate 5 --learning_rate 0.001
+    python3 deepsense_main_ce.py --batch_size 16 --label_rate 5 --learning_rate 0.001
+    python3 single_main_ce.py --modality inertial --batch_size 16 --label_rate 5 --learning_rate 0.001
+    python3 single_main_ce.py --modality skeleton --batch_size 16 --label_rate 5 --learning_rate 0.001
     ```
     ---
 
 # Citation
 If you find this work or the datasets useful for your research, please cite this paper:
 ```
-@inproceedings{ouyang2021clusterfl,
-  title={ClusterFL: a similarity-aware federated learning system for human activity recognition},
-  author={Ouyang, Xiaomin and Xie, Zhiyuan and Zhou, Jiayu and Huang, Jianwei and Xing, Guoliang},
-  booktitle={Proceedings of the 19th Annual International Conference on Mobile Systems, Applications, and Services},
-  pages={54--66},
-  year={2021}
+@inproceedings{ouyang2022cosmo,
+  title={Cosmo: contrastive fusion learning with small data for multimodal human activity recognition},
+  author={Ouyang, Xiaomin and Shuai, Xian and Zhou, Jiayu and Ivy Wang Shi and Huang, Jianwei and Xing, Guoliang},
+  booktitle={Proceedings of the 28th Annual International Conference On Mobile Computing And Networking},
+  year={2022}
 }
 ```
     
