@@ -9,7 +9,6 @@ The program has been tested in the following environment:
 * sklearn 0.24.2
 * opencv-python 4.5.5
 * numpy 1.20.3
-<br>
 
 # Cosmo Overview
 <p align="center" >
@@ -22,7 +21,6 @@ The program has been tested in the following environment:
 * Cosmo on edge: 
 	* initialize the feature encoders and the fusion weights of data quality learned on the cloud; 
 	* iterative fusion learning for combining complementary information from limited labeled multimodal data.
-
 
 
 # Project Strcuture
@@ -87,13 +85,13 @@ The program has been tested in the following environment:
     python3 single_main_ce.py --modality skeleton --batch_size 16 --label_rate 5 --learning_rate 0.001
     ```
     
- * Note: For the CPC baseline on the IMU data, please refer to <a href="https://github.com/harkash/contrastive-predictive-coding-for-har">this repo<\a>. 
+ * Note: For the CPC baseline on the IMU data, please refer to <a href="https://github.com/harkash/contrastive-predictive-coding-for-har">this repo</a>. 
  
     ---
 
 # Repositories utilized in this project
-This project is based on the supervised contrastive learning implementations detailed in the following repositories: 
-<a href="https://github.com/HobbitLong/SupContrast">SupContrast<\a> and <a href="https://github.com/HobbitLong/CMC">CMC<\a>. They were very useful for this project.
+This project is based on the implementations of supervised contrastive learning and contrastive multi-view learning detailed in the following repositories: 
+<a href="https://github.com/HobbitLong/SupContrast">SupContrast</a> and <a href="https://github.com/HobbitLong/CMC">CMC</a>. They are very useful for this project.
 
 
 # Citation
