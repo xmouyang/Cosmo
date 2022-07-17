@@ -53,7 +53,7 @@ The program has been tested in the following environment:
     |-- data_pre.py/		// prepare for the multimodal and singlemodal data
     |-- util.py/	// utility functions
     
-|--UTD-data 	// the processed and splited data for the UTD dataset
+|--UTD-data 	// zipped folder for the processed and splited data in the UTD dataset
 
 |-- README.md
 
@@ -62,7 +62,7 @@ The program has been tested in the following environment:
 <br>
 
 # Quick Start
-* Download the `sample-code-UTD` folder and `UTD-data` folder to your machine, then put `UTD-data` into the folder `sample-code-UTD`.
+* Download the `sample-code-UTD` folder and `UTD-data.zip` to your machine, then put `UTD-data.zip` the folder `sample-code-UTD` and unzipped.
 * Run the following code for our approach Cosmo
     ```bash
     cd ./sample-code-UTD/Cosmo/
