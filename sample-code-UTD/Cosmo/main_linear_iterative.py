@@ -31,7 +31,7 @@ def parse_option():
                         help='print frequency')
     parser.add_argument('--save_freq', type=int, default=50,
                         help='save frequency')
-    parser.add_argument('--batch_size', type=int, default=27,
+    parser.add_argument('--batch_size', type=int, default=16,
                         help='batch_size')
     parser.add_argument('--num_workers', type=int, default=16,
                         help='num of workers to use')
@@ -77,7 +77,7 @@ def parse_option():
                         help='path to pre-trained model')
     parser.add_argument('--trial', type=int, default='3',
                         help='id for recording multiple runs')
-    parser.add_argument('--guide_flag', type=int, default='0',
+    parser.add_argument('--guide_flag', type=int, default='1',
                         help='id for recording multiple runs')
 
     opt = parser.parse_args()
@@ -143,7 +143,7 @@ def set_model(opt):
     criterion = torch.nn.CrossEntropyLoss()
 
     ## load pretrained feature encoders
-    ckpt_path = opt.ckpt + str(opt.label_rate) + '_lr_0.01_decay_0.9_bsz_27_temp_0.07_trial_0_epoch_300/last.pth'
+    ckpt_path = opt.ckpt + str(opt.label_rate) + '_lr_0.01_decay_0.9_bsz_32_temp_0.07_trial_0_epoch_300/last.pth'
     ckpt = torch.load(ckpt_path, map_location='cpu')
     state_dict = ckpt['model']
 
