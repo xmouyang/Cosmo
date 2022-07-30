@@ -95,7 +95,7 @@ This project is based on the implementations of supervised contrastive learning 
 
 
 # Citation
-If you find this work or the datasets useful for your research, please cite this paper:
+The code of this project are made available for non-commercial, academic research only. If you would like to use the code of this project, please cite the following paper:
 ```
 @inproceedings{ouyang2022cosmo,
   title={Cosmo: contrastive fusion learning with small data for multimodal human activity recognition},
