@@ -1,5 +1,5 @@
 # Cosmo: Contrastive Fusion Learning with Small Data
-This is a repo for MobiCom 2022 paper: " <a href="https://dl.acm.org/doi/10.1145/3458864.3467681"> Cosmo: Contrastive Fusion Learning with Small Data for Multimodal Human Activity Recognition </a>".
+This is a repo for MobiCom 2022 paper: " <a href="https://github.com/xmouyang/xmouyang.github.io/blob/master/data/Cosmo-MobiCom22-camera-ready-0903.pdf"> Cosmo: Contrastive Fusion Learning with Small Data for Multimodal Human Activity Recognition </a>".
 
 # Requirements
 The program has been tested in the following environment: 
