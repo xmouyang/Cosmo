@@ -85,7 +85,7 @@ The program has been tested in the following environment:
     python3 single_main_ce.py --modality skeleton --batch_size 16 --label_rate 5 --learning_rate 0.001
     ```
     
- * Note: For the CPC baseline on the IMU data, please refer to <a href="https://github.com/harkash/contrastive-predictive-coding-for-har">this repo</a>. 
+ * Note: For the CPC baseline on the USC dataset, please refer to <a href="https://github.com/harkash/contrastive-predictive-coding-for-har">this repo</a>. 
  
     ---
 
