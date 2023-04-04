@@ -1,5 +1,5 @@
 # Cosmo: Contrastive Fusion Learning with Small Data
-This is a repo for MobiCom 2022 paper: " <a href="https://github.com/xmouyang/xmouyang.github.io/blob/master/data/Cosmo-mobicom22-final.pdf"> Cosmo: Contrastive Fusion Learning with Small Data for Multimodal Human Activity Recognition </a>".
+This is a repo for MobiCom 2022 paper: " <a href="https://dl.acm.org/doi/abs/10.1145/3495243.3560519"> Cosmo: Contrastive Fusion Learning with Small Data for Multimodal Human Activity Recognition </a>".
 
 # Requirements
 The program has been tested in the following environment: 
@@ -99,8 +99,9 @@ The code of this project are made available for non-commercial, academic researc
 ```
 @inproceedings{ouyang2022cosmo,
   title={Cosmo: contrastive fusion learning with small data for multimodal human activity recognition},
-  author={Ouyang, Xiaomin and Shuai, Xian and Zhou, Jiayu and Shi, Ivy Wang and Xie, Zhiyuan and Xing, Guoliang and Huang, Jianwei },
-  booktitle={Proceedings of the 28th Annual International Conference On Mobile Computing And Networking},
+  author={Ouyang, Xiaomin and Shuai, Xian and Zhou, Jiayu and Shi, Ivy Wang and Xie, Zhiyuan and Xing, Guoliang and Huang, Jianwei},
+  booktitle={Proceedings of the 28th Annual International Conference on Mobile Computing And Networking},
+  pages={324--337},
   year={2022}
 }
 ```
